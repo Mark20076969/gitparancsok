@@ -1,15 +1,51 @@
+Bármely git parancsról kaphatunk segítséget a --help opcióval. Pl.
 git commit --help
+Git repository létrehozása az aktuális könyvtárban:
 git init
+Sokkal gyakoribb, hogy egy már létező repositoryt klónozunk:
 git clone https://github.com/bmeaut/snippets.git
+Ha már létrejött a repository, annak állapotát (változott-e valami, stagelve van-e valami) a státusz lekérdezésével tehetjük meg:
 git status
+Stagelni fájlokat az add paranccsal lehet:
 git add egyfajl.txt
 git add .
+Ez utóbbi minden változást stagel. A stagelt fájlokat commitolni pedig az alábbi módon lehet:
 git commit -m "Üzenet"
 git commit
+A commitok sorát a
 git log
 gitk --all
+parancsok mutatják meg, szövegesen és grafikusan. A gitk-nál az --all azt jelenti, hogy az összes branchet látni szeretnénk, nem csak az aktuálisat.
+Az aktuális munkakönyvtár és commit közötti eltérést (mi változott) a
 git diff
+parancs mutatja meg.
+
 git checkout -b UjBranchnev
+
 git checkout -b UjBranchnev a1b2c3
+
 git checkout master
+
 git branch --delete NemKellBranch
+
+git reset --hard
+
+git reset --hard a1b2c3
+
+git push
+
+git pull
+
+git fetch
+
+git fetch --all
+
+git push origin master:origin/master
+
+git merge MasikBranch
+
+git rebase MasikBranch
+
+git mergetool
+
+git rebase --continue
